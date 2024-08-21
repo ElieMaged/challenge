@@ -1,9 +1,23 @@
-console.log("HALOOOO")
-const arr = ['a','b','c']
+//factory function
 
-let newArr = arr.filter((e,i) => {
-console.log(e)
-console.log(i)
-console.log(1)
-})
+function createCircle(radius){
+    return{
+        radius,
+        draw: function() {
+            console.log('DRAW CIRCLE')
+        }
+    }
+}
 
+const circ = createCircle(1)
+
+//constructor function
+
+function CreateSquare(radius) {
+this.radius = radius;
+this.draw = function() {
+    console.log('DRAW SQUARE')
+}
+}
+
+const square = new CreateSquare(5)
