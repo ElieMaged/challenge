@@ -22,4 +22,3 @@ class MakeEspresso{
 }
 
 const blackDecker = new MakeEspresso('black', 'mild', 'Black&Decker', '500$')
-const kekDecker = new MakeEspresso('black', 'mild', 'Black&Decker')
