@@ -1,24 +1,55 @@
-class MakeEspresso{
-    constructor(tea, hotWater, brand, price) {
-        this.tea = tea;
-        this.hotWater = hotWater;
-        this.brand = brand;
-        let cost = price;
-        let sayPrice = function() {
-            console.log(cost)
-        }
-        this.announce = function() {
-            console.log(cost + 'HEWOOO')
-        }
+class MakeCharacter {
+    constructor(name, health, mana, race, strength, xp, level) {
+        this.name = name
+        this.health = health
+        this.mana = mana
+        this.race = race
+        this.strength = strength
+        this.xp = xp
+        this.level = level
     }
 
- 
-   makeTea = function() {
-        console.log('We making tea UwU')
+    levelup() {
+      switch(true) {
+        case  this.level === 1 && this.xp >= 20: 
+             this.level += 1
+             return `${this.name} has leveled up to ${this.level}!`
+        case  this.level === 2 && this.xp >= 40:
+            this.level += 1
+             return `${this.name} has leveled up to ${this.level}!`
+        case  this.level === 1 && this.xp < 20:
+             return `You do not have enough xp to levelup above ${this.level}!`
+        case  this.level ===  2  && this.xp < 40: 
+             return `You do not have enough xp to levelup above ${this.level}!`
+        case  this.level ===  3  && this.xp < 60: 
+             return `You do not have enough xp to levelup above ${this.level}!`
+        default: 
+             return  `Man just get more xp yo :/`
+        }
+      } 
+      
+    
+
+    describe() {
+        return `I am ${this.name}, a level ${this.level} ${this.race}`
     }
-    boil = function() {
-        console.log('OH WE BOILIN!!!')
+
+    fight(target) {
+     if(this.strength > target.strength) {
+        this.xp += 20;
+          return `You defeat ${target.name}, gaining 20 xp!`
+     } else if(this.strength < target.strength) {
+        this.hp -= 10
+          return `${this.name} has been defeated by ${target.name}`
+     }
+      
+        
+      
     }
+
 }
 
-const blackDecker = new MakeEspresso('black', 'mild', 'Black&Decker', '500$')
+const aurora = new MakeCharacter('Aurora', 20, 20,'bunny', 25, 0, 1)
+const carol = new MakeCharacter('Carol', 20, 20,'elf', 20, 0, 1)
+
+console.log(aurora)
