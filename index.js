@@ -1,3 +1,4 @@
+//Character Creator
 class MakeCharacter {
     constructor(name, health, mana, race, strength, xp, level) {
         this.name = name
@@ -24,7 +25,7 @@ class MakeCharacter {
         case  this.level ===  3  && this.xp < 60: 
              return `You do not have enough xp to levelup above ${this.level}!`
         default: 
-             return  `Man just get more xp yo :/`
+             return `Man just get more xp yo :/`
         }
       } 
       
@@ -48,6 +49,9 @@ class MakeCharacter {
     }
 
 }
+
+//Mob Creator
+
 
 const aurora = new MakeCharacter('Aurora', 20, 20,'bunny', 25, 0, 1)
 const carol = new MakeCharacter('Carol', 20, 20,'elf', 20, 0, 1)
