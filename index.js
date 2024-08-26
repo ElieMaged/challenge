@@ -64,17 +64,7 @@ const a = [1,2,3]
 const b = [2]
 
 function filterNumb(arr1, arr2) {
-     let newArr = []
-     for(let i = 0; i < arr2.length; i++) {    
-          arr1.forEach((prev) => {
-               if(prev !== arr2[i]) {
-                    newArr.push(prev)
-               }
-             
-          return newArr
-          })
-     }
-return newArr
+return a.filter(x => !arr2.includes(x))
 }
 
 console.log(filterNumb(a,b))
