@@ -17,10 +17,16 @@ class Enemy extends Character {
         super(name, health)
         this._danger = danger
     }
-    get encounter() {
+    get danger() {
         return this._danger
     }
+
 }
 
 
 const rochelle = new Character('Rochelle', 100) 
+const tank = new Enemy('Tank', 200, 'High')
+
+
+const peeps = [rochelle, tank]
+
