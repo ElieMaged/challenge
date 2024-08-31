@@ -23,7 +23,7 @@ class Enemy extends Character {
 
 }
 
-
+console.log('uwu')
 const rochelle = new Character('Rochelle', 100) 
 const tank = new Enemy('Tank', 200, 'High')
 
