@@ -1,32 +1,15 @@
-class Character {
-    constructor(name, health) {
-           this._name = name
-           this.health = health
+function getCount(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+    let arr = []
+    let vowelArr = []
+    
+    for(let i = 0; i < str.length; i++){
+    arr.push(str[i])
     }
-    get name() {
-        return this._name
+    
+    for(let i = 0; i <= vowels.length; i++) {
+    arr.includes(vowels[i]) && vowelArr.push(str[i])
     }
-    announce() {
-        console.log(`I am ${this.name}`)
+    
+    return vowelArr.length
     }
-}
-
-
-class Enemy extends Character {
-    constructor(name, health, danger) {
-        super(name, health)
-        this._danger = danger
-    }
-    get danger() {
-        return this._danger
-    }
-
-}
-
-console.log('uwu')
-const rochelle = new Character('Rochelle', 100) 
-const tank = new Enemy('Tank', 200, 'High')
-
-
-const peeps = [rochelle, tank]
-
