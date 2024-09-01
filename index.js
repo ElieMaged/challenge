@@ -1,15 +1,31 @@
-function getCount(str) {
-    let vowels = ['a', 'e', 'i', 'o', 'u']
-    let arr = []
-    let vowelArr = []
-    
-    for(let i = 0; i < str.length; i++){
-    arr.push(str[i])
+class Car {
+    constructor(brand, color, speed, passcode) {
+this.brand = brand;
+this.color = color;
+this.speed = speed;
+this._passcode = passcode;
     }
-    
-    for(let i = 0; i <= vowels.length; i++) {
-    arr.includes(vowels[i]) && vowelArr.push(str[i])
+    get passcode() {
+        return this._passcode
     }
-    
-    return vowelArr.length
+    honk() {
+        console.log('honk :3')
     }
+}
+
+class Bike extends Car {
+constructor(brand ,color ,speed, passcode, wheels) {
+super(brand,color,speed,passcode)
+this.wheels = wheels
+    }
+passBy() {
+    console.log(`${this.brand} just passed by you!`)
+}
+wheelie() {
+console.log(`${this.brand} just performed a SICK wheelie using ${this.wheels} wheels!`)
+}
+}
+
+const vitara = new Car('Vitara', 'black', 120, 1234)
+
+const scorpion = new Bike('Scorpion', 'black', 150, 1532, 2)
