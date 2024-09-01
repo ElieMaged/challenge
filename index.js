@@ -1,31 +1,39 @@
-class Car {
-    constructor(brand, color, speed, passcode) {
-this.brand = brand;
-this.color = color;
-this.speed = speed;
-this._passcode = passcode;
+class Contractor {
+    constructor(name, role) {
+        this.name = name;
+        this.role = role;
     }
-    get passcode() {
-        return this._passcode
+    sendCV() {
+        console.log(`${this.name} has sent their CV!`)
     }
-    honk() {
-        console.log('honk :3')
+    announce() {
+        console.log(`Hello! I am ${this.name}, and I am a ${this.role}`)
     }
 }
 
-class Bike extends Car {
-constructor(brand ,color ,speed, passcode, wheels) {
-super(brand,color,speed,passcode)
-this.wheels = wheels
+class Frontend extends Contractor {
+    constructor(name, role, special, frontLang) {
+        super(name, role);
+        this.special = special;
+        this.frontLang = frontLang;
     }
-passBy() {
-    console.log(`${this.brand} just passed by you!`)
-}
-wheelie() {
-console.log(`${this.brand} just performed a SICK wheelie using ${this.wheels} wheels!`)
-}
+    design() {
+        console.log('I create designs!')
+    }
 }
 
-const vitara = new Car('Vitara', 'black', 120, 1234)
+class Backend extends Contractor {
+    constructor(name, role, special, backLang) {
+       super(name, role);
+       this.special = special;
+       this.backlang = backlang;
+    }
+    database() {
+        console.log('I create databases!')
+    }
+}
 
-const scorpion = new Bike('Scorpion', 'black', 150, 1532, 2)
+
+const mark = new Contractor('Mark Azmy','Engineer')
+const elie = new Frontend('Elie Maged','Frontend Engineer', 'Designs', 'Nextjs')
+const harry = new Backend('Harry Adel', 'Backend Engineer', 'Databases', 'Nodejs')
