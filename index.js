@@ -1,7 +1,10 @@
 class Contractor {
     constructor(name, role) {
-        this.name = name;
+        this._name = name;
         this.role = role;
+    }
+    get name() {
+        return this._name
     }
     sendCV() {
         console.log(`${this.name} has sent their CV!`)
@@ -14,8 +17,11 @@ class Contractor {
 class Frontend extends Contractor {
     constructor(name, role, special, frontLang) {
         super(name, role);
-        this.special = special;
+        this._special = special;
         this.frontLang = frontLang;
+    }
+    get special() {
+        return this._special
     }
     design() {
         console.log('I create designs!')
@@ -25,8 +31,11 @@ class Frontend extends Contractor {
 class Backend extends Contractor {
     constructor(name, role, special, backLang) {
        super(name, role);
-       this.special = special;
-       this.backlang = backlang;
+       this._special = special;
+       this.backLang = backLang;
+    }
+    get special() {
+        return this._special
     }
     database() {
         console.log('I create databases!')
@@ -37,3 +46,5 @@ class Backend extends Contractor {
 const mark = new Contractor('Mark Azmy','Engineer')
 const elie = new Frontend('Elie Maged','Frontend Engineer', 'Designs', 'Nextjs')
 const harry = new Backend('Harry Adel', 'Backend Engineer', 'Databases', 'Nodejs')
+
+const list = [mark, elie, harry]
