@@ -49,3 +49,13 @@ const elie = new Frontend('Elie Maged','Frontend Engineer', 'Designs', 'Nextjs')
 const harry = new Backend('Harry Adel', 'Backend Engineer', 'Databases', 'Nodejs')
 
 const list = [mark, elie, harry]
+
+function averages(numbers) {
+    let arr = []
+    
+    for(let i = 0; i < numbers.length -1; i++) {
+    arr.push((numbers[0] + numbers[1])/2)
+    }
+    
+    return arr
+    }
