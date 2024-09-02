@@ -42,6 +42,7 @@ class Backend extends Contractor {
     }
 }
 
+console.log(1)
 
 const mark = new Contractor('Mark Azmy','Engineer')
 const elie = new Frontend('Elie Maged','Frontend Engineer', 'Designs', 'Nextjs')
