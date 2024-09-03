@@ -2,9 +2,8 @@ function houseOne() {
     console.log('House 1 has been delivered!')
 }
 
-function houseTwo(callback) {
+async function houseTwo() {
     setTimeout(() => {
-        callback();
         console.log('House 2 has been delivered!')
     }, 3000)
 }
@@ -14,4 +13,5 @@ function houseThree() {
 }
 
 houseOne()
-houseTwo(houseThree)
+houseTwo()
+houseThree()
