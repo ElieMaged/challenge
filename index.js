@@ -15,3 +15,4 @@ function houseThree() {
 houseOne()
 houseTwo()
 houseThree()
+console.log('house')
