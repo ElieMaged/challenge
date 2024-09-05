@@ -15,5 +15,4 @@ function houseThree() {
 houseOne()
 houseTwo()
 houseThree()
-console.log('house')
-qweqweqweq
+console.log(1 + 1 + 1)
