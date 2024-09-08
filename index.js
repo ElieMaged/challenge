@@ -10,7 +10,8 @@ if(this.power > target.power) {
     console.log(`${this.name} attacks ${target.name} for ${this.power} points of damage`);
     target.hp -= this.power;
     console.log(`${target.name} has ${target.hp} hp left`);
-    target.hp <= 0 ? console.log(`${target.name} has fainted!`) : console.log(`${target.name} still lives!`)
+    target.hp <= 0 ? console.log(`${target.name} has fainted!`) : console.log(`${target.name} still lives!`);
+    
 } 
 
 else if(target.power > this.power) {
