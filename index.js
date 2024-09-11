@@ -1,46 +1,53 @@
-const houseOne = new Promise((resolve, reject) => {
-    const error = false;
-    if(!error) {
-        resolve('House 1 has been delivered!')
-    }
-    else{
-        reject('House 1 ran out of oxygen :c')
-    }
-})
-  .then(data => console.log(data))
-
-
-
-  const houseTwo = new Promise((resolve, reject) => {
-    const error = false;
-    if(!error) {
+function houseOne() {
+    return new Promise((res, rej) => {
+        const error = false
         setTimeout(() => {
-            resolve('House 2 has been delivered!')
-        },3000)
-      
-    }
-    else{
-        reject('House 2 ran out of oxygen :c')
-    }
-})
-  .then(data => console.log(data))
-.then(houseThree = new Promise((resolve, reject) => {
-    const error = false;
-    if(!error) {
-        resolve('House 3 has been delivered!')
-    }
-    else{
-        reject('House 3 ran out of oxygen :c')
-    }
-})
-  .then(data => console.log(data))
+            if(!error) {
+                res('House 1 has been delivered ^_^')
+            } else {
+                rej('House 2 has been rejected :c')
+            }
+        }, 1000)
+    })
+}
 
 
 
-)
+
+function houseTwo() {
+    return new Promise((res, rej) => {
+        const error = false
+        setTimeout(() => {
+            if(!error) {
+                res('House 2 has been delivered ^_^')
+            } else {
+                rej('House 2 has been rejected :c')
+            }
+        }, 1000)
+    })
+}
+
+function houseThree() {
+    return new Promise((res, rej) => {
+        const error = false
+        setTimeout(() => {
+            if(!error) {
+                res('House 3 has been delivered ^_^')
+            } else {
+                rej('House 3 has been rejected :c')
+            }
+        }, 1000)
+    })
+}
 
 
 
+houseOne()
+    .then(data => console.log(data))
+    .then(houseTwo)
+    .then(data => console.log(data))
+    .then(houseThree)
+    .then(data => console.log(data))
 
 
 
