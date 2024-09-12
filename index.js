@@ -1,57 +1,19 @@
-function houseOne() {
-    return new Promise((res, rej) => {
-        const error = false
-        setTimeout(() => {
-            if(!error) {
-                res('House 1 has been delivered ^_^')
-            } else {
-                rej('House 2 has been rejected :c')
-            }
-        }, 1000)
-    })
+
+
+
+
+async function listHouses() {
+    const house1 = await houseOne()
+    console.log(house1)
+    const house2 = await houseTwo()
+    console.log(house2)
+    const house3 = await houseThree()
+
+
+    console.log(house3)
 }
 
-
-
-
-function houseTwo() {
-    return new Promise((res, rej) => {
-        const error = false
-        setTimeout(() => {
-            if(!error) {
-                res('House 2 has been delivered ^_^')
-            } else {
-                rej('House 2 has been rejected :c')
-            }
-        }, 1000)
-    })
-}
-
-function houseThree() {
-    return new Promise((res, rej) => {
-        const error = false
-        setTimeout(() => {
-            if(!error) {
-                res('House 3 has been delivered ^_^')
-            } else {
-                rej('House 3 has been rejected :c')
-            }
-        }, 1000)
-    })
-}
-
-
-
-houseOne()
-    .then(data => console.log(data))
-    .then(houseTwo)
-    .then(data => console.log(data))
-    .then(houseThree)
-    .then(data => console.log(data))
-
-
-
-
+listHouses()
 
 // class Character {
 //     constructor(name, hp, mp, power) {
