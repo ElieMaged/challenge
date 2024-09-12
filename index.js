@@ -1,19 +1,35 @@
+async function cuteDoggo() {
+    const res = await fetch('https://dog.ceo/api/breeds/image/random',{
+        'Accept':'application/json'
+    })
+    decoded = await res.json()
 
 
 
-
-async function listHouses() {
-    const house1 = await houseOne()
-    console.log(house1)
-    const house2 = await houseTwo()
-    console.log(house2)
-    const house3 = await houseThree()
+    const dogFrame = document.getElementById('doggy')
 
 
-    console.log(house3)
+    dogFrame.src = decoded.message
+    console.log(decoded.message)
 }
 
-listHouses()
+
+const button = document.getElementById('button')
+
+button.addEventListener('click', () => {
+    cuteDoggo()
+})
+
+
+
+
+
+
+
+
+
+
+
 
 // class Character {
 //     constructor(name, hp, mp, power) {
@@ -78,5 +94,3 @@ listHouses()
 // let aurora = new Player('Aurora', 100, 100, 'likes girls', 10, 50)
 
 // let bandit = new Character('Bandit', 50, 50, 5)
-
-
