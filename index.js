@@ -19,7 +19,7 @@ const button = document.getElementById('button')
 button.addEventListener('click', () => {
     cuteDoggo()
 })
-
+console.log('YIPEEE')
 
 
 
